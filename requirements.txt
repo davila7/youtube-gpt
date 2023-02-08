@@ -6,6 +6,7 @@
 #
 matplotlib
 plotly
+scipy
 pandas
 numpy
 git+https://github.com/openai/whisper.git
