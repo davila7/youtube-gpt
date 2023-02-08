@@ -8,6 +8,7 @@ matplotlib
 plotly
 scipy
 sklearn
+scikit-learn=0.20
 pandas
 numpy
 git+https://github.com/openai/whisper.git
