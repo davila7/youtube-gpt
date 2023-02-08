@@ -4,7 +4,6 @@ import streamlit as st
 import whisper
 from pytube import YouTube
 from streamlit_chat import message
-
 import openai
 from openai.embeddings_utils import get_embedding, cosine_similarity
 #openai.api_key = st.secrets["apikey"]
