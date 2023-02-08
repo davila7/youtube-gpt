@@ -5,6 +5,7 @@
 #    pip-compile
 #
 matplotlib
+plotly
 pandas
 numpy
 git+https://github.com/openai/whisper.git
