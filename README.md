@@ -51,3 +51,4 @@ streamlit run app.py
 
 - Semantic search with embedding
 - Chart with emotional analysis
+- Connect with Pinecone

@@ -2,6 +2,11 @@
 .vscode/
 .idea/
 
+# Youtube GPT resources
+transcription.csv
+word_embeddings.csv
+youtube_video.mp4
+
 # Vagrant
 .vagrant/
 
