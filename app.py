@@ -18,10 +18,10 @@ mp4_video = ''
 audio_file = ''
 # Sidebar
 with st.sidebar:
-    user_secret = st.text_input(label = ":blue[OpenAI API key]", value = "",
+    user_secret = st.text_input(label = ":blue[OpenAI API key]",
                                 placeholder = "Paste your openAI API key, sk-",
                                 type = "password")
-    youtube_link = st.text_input(label = ":red[Youtube link]", value = "",
+    youtube_link = st.text_input(label = ":red[Youtube link]",
                                 placeholder = "")
     if youtube_link and user_secret:
         youtube_video = YouTube(youtube_link)
@@ -71,7 +71,7 @@ with st.sidebar:
 st.title("Youtube GPT 🤖 ")
 tab1, tab2, tab3, tab4 = st.tabs(["Intro", "Transcription", "Embedding", "Chat with the Video"])
 with tab1:
-    st.write("To start, add your OpenAI Api key and the url of the video on Youtube. Then click Start Analysis")
+    st.markdown('Read the article to know how it works: [Medium Article]("https://medium.com/@dan.avila7/youtube-gpt-start-a-chat-with-a-video-efe92a499e60")')
     st.markdown("### How does it work?")
     st.write("Youtube GPT was written with the following tools:")
     st.markdown("#### Code GPT")
@@ -86,7 +86,6 @@ with tab1:
     st.write('The chat uses the OpenAI API with the [GPT-3]("https://platform.openai.com/docs/models/gpt-3") model "text-davinci-003""')
     st.markdown("""---""")
     st.write('Repo: [Github](https://github.com/davila7/youtube-gpt)')
-    st.write('Article : [Medium](https://)')
 
 with tab2: 
     st.header("Transcription:")

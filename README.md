@@ -1,6 +1,9 @@
 <h1 align="center">
 YoutubeGPT 🤖
 </h1>
+
+Read the article to know how it works: [Medium Article]("https://medium.com/@dan.avila7/youtube-gpt-start-a-chat-with-a-video-efe92a499e60")
+
 With Youtube GPT you will be able to extract all the information from a video on YouTube just by pasting the video link.
 You will obtain the transcription, the embedding of each segment and also ask questions to the video through a chat.
 
