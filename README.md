@@ -8,13 +8,21 @@ All code was written with the help of <a href="https://codegpt.co">Code GPT</a>
 <hr>
 <br>
 
-# 🔧 Features
+# Features
 
 - Video transcription with **OpenAI Whisper**
 - Embedding Transcript Segments with the OpenAI API (**text-embedding-ada-002**)
 - Chat with the video using **streamlit-chat** and OpenAI API (**text-davinci-003**)
 
-# Dependencies
+# Running Locally
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/davila7/youtube-gpt
+cd youtube-gpt
+```
+2. Install dependencies
 
 These dependencies are required to install with the requirements.txt file:
 
@@ -30,8 +38,16 @@ These dependencies are required to install with the requirements.txt file:
 * pytube 
 * openai-whisper
 
-To install the dependencies with this file, you will need to use the pip command. The pip command will read the requirements.txt file and download and install all the dependencies listed in it. The command is the following:
-
 ```bash
 pip install -r requirements.txt
 ```
+3. Run the Streamlit server
+
+```bash
+streamlit run app.py
+```
+
+## Upcoming Features 🚀
+
+- Semantic search with embedding
+- Chart with emotional analysis
