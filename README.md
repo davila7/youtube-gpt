@@ -27,13 +27,11 @@ https://youtu.be/lKO3qDLCAnk
 Add the video URL and then click Start Analysis
 ![Youtube](https://user-images.githubusercontent.com/6216945/217701635-7c386ca7-c802-4f56-8148-dcce57555b5a.gif)
 
-When the analysis is finished, you can close the menu.
-
 # Pytube and OpenAI Whisper
-
+The video will be downloaded with pytube and then OpenAI Whisper will take care of transcribing and segmenting the video.
 ![Pyyube Whisper](https://user-images.githubusercontent.com/6216945/217704219-886d0afc-4181-4797-8827-82f4fd456f4f.gif)
 
-```
+```python
 # Get the video 
 youtube_video = YouTube(youtube_link)
 streams = youtube_video.streams.filter(only_audio=True)
@@ -47,12 +45,11 @@ model = whisper.load_model('base')
 output = model.transcribe("youtube_video.mp4")
 ```
 
-The video will be downloaded with pytube and then OpenAI Whisper will take care of transcribing and segmenting the video.
-
 # Embedding with "text-embedding-ada-002"
 We obtain the vectors with **text-embedding-ada-002** of each segment delivered by whisper
+![Embedding](https://user-images.githubusercontent.com/6216945/217705008-180285d7-6bce-40c3-8601-576cc2f38171.gif)
 
-```
+```python
 # Embeddings
 segments = output['segments']
 for segment in segments:
@@ -71,8 +68,6 @@ for segment in segments:
     data.append(meta)
 pd.DataFrame(data).to_csv('word_embeddings.csv') 
 ```
-
-
 
 
 # Running Locally
