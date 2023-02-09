@@ -11,7 +11,6 @@ All code was written with the help of <a href="https://codegpt.co">Code GPT</a>
 
 <a href="https://codegpt.co" target="_blank"><img width="753" alt="Captura de Pantalla 2023-02-08 a la(s) 9 16 43 p  m" src="https://user-images.githubusercontent.com/6216945/217699939-eca3ae47-c488-44da-9cf6-c7caef69e1a7.png"></a>
 
-
 <hr>
 <br>
 
@@ -20,6 +19,61 @@ All code was written with the help of <a href="https://codegpt.co">Code GPT</a>
 - Video transcription with **OpenAI Whisper**
 - Embedding Transcript Segments with the OpenAI API (**text-embedding-ada-002**)
 - Chat with the video using **streamlit-chat** and OpenAI API (**text-davinci-003**)
+
+# Example
+For this example we are going to use this video from The PyCoach
+https://youtu.be/lKO3qDLCAnk
+
+Add the video URL and then click Start Analysis
+![Youtube](https://user-images.githubusercontent.com/6216945/217701635-7c386ca7-c802-4f56-8148-dcce57555b5a.gif)
+
+When the analysis is finished, you can close the menu.
+
+# Pytube and OpenAI Whisper
+
+![Pyyube Whisper](https://user-images.githubusercontent.com/6216945/217704219-886d0afc-4181-4797-8827-82f4fd456f4f.gif)
+
+```
+# Get the video 
+youtube_video = YouTube(youtube_link)
+streams = youtube_video.streams.filter(only_audio=True)
+mp4_video = stream.download(filename='youtube_video.mp4')
+audio_file = open(mp4_video, 'rb')
+
+# whisper load base model
+model = whisper.load_model('base')
+
+# Whisper transcription
+output = model.transcribe("youtube_video.mp4")
+```
+
+The video will be downloaded with pytube and then OpenAI Whisper will take care of transcribing and segmenting the video.
+
+# Embedding with "text-embedding-ada-002"
+We obtain the vectors with **text-embedding-ada-002** of each segment delivered by whisper
+
+```
+# Embeddings
+segments = output['segments']
+for segment in segments:
+    openai.api_key = user_secret
+    response = openai.Embedding.create(
+        input= segment["text"].strip(),
+        model="text-embedding-ada-002"
+    )
+    embeddings = response['data'][0]['embedding']
+    meta = {
+        "text": segment["text"].strip(),
+        "start": segment['start'],
+        "end": segment['end'],
+        "embedding": embeddings
+    }
+    data.append(meta)
+pd.DataFrame(data).to_csv('word_embeddings.csv') 
+```
+
+
+
 
 # Running Locally
 
