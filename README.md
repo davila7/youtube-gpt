@@ -8,6 +8,10 @@ With Youtube GPT you will be able to extract all the information from a video on
 You will obtain the transcription, the embedding of each segment and also ask questions to the video through a chat.
 
 All code was written with the help of <a href="https://codegpt.co">Code GPT</a>
+
+<img width="753" alt="Captura de Pantalla 2023-02-08 a la(s) 9 16 43 p  m" src="https://user-images.githubusercontent.com/6216945/217699939-eca3ae47-c488-44da-9cf6-c7caef69e1a7.png">
+
+
 <hr>
 <br>
 
