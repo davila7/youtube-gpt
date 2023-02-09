@@ -27,7 +27,7 @@ https://youtu.be/lKO3qDLCAnk
 Add the video URL and then click Start Analysis
 ![Youtube](https://user-images.githubusercontent.com/6216945/217701635-7c386ca7-c802-4f56-8148-dcce57555b5a.gif)
 
-# Pytube and OpenAI Whisper
+## Pytube and OpenAI Whisper
 The video will be downloaded with pytube and then OpenAI Whisper will take care of transcribing and segmenting the video.
 ![Pyyube Whisper](https://user-images.githubusercontent.com/6216945/217704219-886d0afc-4181-4797-8827-82f4fd456f4f.gif)
 
@@ -45,7 +45,7 @@ model = whisper.load_model('base')
 output = model.transcribe("youtube_video.mp4")
 ```
 
-# Embedding with "text-embedding-ada-002"
+## Embedding with "text-embedding-ada-002"
 We obtain the vectors with **text-embedding-ada-002** of each segment delivered by whisper
 ![Embedding](https://user-images.githubusercontent.com/6216945/217705008-180285d7-6bce-40c3-8601-576cc2f38171.gif)
 
@@ -68,7 +68,14 @@ for segment in segments:
     data.append(meta)
 pd.DataFrame(data).to_csv('word_embeddings.csv') 
 ```
+## OpenAI GPT-3
+We make a question to the vectorized text, we do the search of the context and then we send the prompt with the context to the model "text-davinci-003"
 
+![Question1](https://user-images.githubusercontent.com/6216945/217708086-b89dce2e-e3e2-47a7-b7dd-77e402d818cb.gif)
+
+We can even ask direct questions about what happened in the video. For example, here we ask about how long the exercise with Numpy that Pycoach did in the video took.
+
+![Question2](https://user-images.githubusercontent.com/6216945/217708485-df1edef3-d5f1-4b4a-a5c9-d08f31c80be4.gif)
 
 # Running Locally
 
