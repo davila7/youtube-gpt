@@ -9,7 +9,7 @@ You will obtain the transcription, the embedding of each segment and also ask qu
 
 All code was written with the help of <a href="https://codegpt.co">Code GPT</a>
 
-<a href="https://codegpt.co"><img width="753" alt="Captura de Pantalla 2023-02-08 a la(s) 9 16 43 p  m" src="https://user-images.githubusercontent.com/6216945/217699939-eca3ae47-c488-44da-9cf6-c7caef69e1a7.png"></a>
+<a href="https://codegpt.co" target="_blank"><img width="753" alt="Captura de Pantalla 2023-02-08 a la(s) 9 16 43 p  m" src="https://user-images.githubusercontent.com/6216945/217699939-eca3ae47-c488-44da-9cf6-c7caef69e1a7.png"></a>
 
 
 <hr>
