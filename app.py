@@ -35,7 +35,7 @@ array = []
 # Sidebar
 # with st.sidebar:
 #     user_secret = st.text_input(label = ":blue[OpenAI API key]",
-#                                 value="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",
+#                                 value="",
 #                                 placeholder = "Paste your openAI API key, sk-",
 #                                 type = "password")
 #     youtube_link = st.text_input(label = ":red[Youtube link]",
