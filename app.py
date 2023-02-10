@@ -129,7 +129,7 @@ with tab4:
         returns = []
         
         # Sort by distance with 2 hints
-        for i, row in df.sort_values('distances', ascending=True).head(3).iterrows():
+        for i, row in df.sort_values('distances', ascending=True).head(4).iterrows():
             # Else add it to the text that is being returned
             returns.append(row["text"])
 
