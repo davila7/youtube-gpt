@@ -198,7 +198,7 @@ with tab4:
             max_tokens = 1024,
             n = 1,
             stop=["Q:"],
-            temperature=0.5,
+            temperature=0.2,
         )
         message = completions.choices[0].text
         return message
