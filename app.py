@@ -117,8 +117,8 @@ _, container, _ = st.columns([side, 47, side])
 container.video(data=VIDEO_DATA)
 tab1, tab2, tab3, tab4 = st.tabs(["Intro", "Transcription", "Embedding", "Chat with the Video"])
 with tab1:
-    st.markdown('Read the article to know how it works: [Medium Article]("https://medium.com/@dan.avila7/youtube-gpt-start-a-chat-with-a-video-efe92a499e60")')
     st.markdown("### How does it work?")
+    st.markdown('Read the article to know how it works: [Medium Article]("https://medium.com/@dan.avila7/youtube-gpt-start-a-chat-with-a-video-efe92a499e60")')
     st.write("Youtube GPT was written with the following tools:")
     st.markdown("#### Code GPT")
     st.write("All code was written with the help of Code GPT. Visit [codegpt.co]('https://codegpt.co') to get the extension.")
@@ -131,8 +131,9 @@ with tab1:
     st.markdown("#### GPT-3")
     st.write('The chat uses the OpenAI API with the [GPT-3]("https://platform.openai.com/docs/models/gpt-3") model "text-davinci-003""')
     st.markdown("""---""")
+    st.write('Author: [Daniel Ávila](https://www.linkedin.com/in/daniel-avila-arias/)')
     st.write('Repo: [Github](https://github.com/davila7/youtube-gpt)')
-    st.write("This software was developed by Code GPT, for more information visit: https://codegpt.co")
+    st.write("This software was developed with Code GPT, for more information visit: https://codegpt.co")
 with tab2: 
     st.header("Transcription:")
     if(os.path.exists("youtube_video.mp4")):
